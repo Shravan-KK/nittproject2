@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Professor Sign Up</title>
+</head>
+<body class="bg-light">
+    <div class="min-vh-100 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="card shadow-lg border-0">
+                        <!-- Card Header -->
+                        <div class="card-header bg-danger text-white text-center py-4 border-0">
+                            <div class="mb-3">
+                                <div class="bg-white text-danger rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+                                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                                </div>
+                            </div>
+                            <h2 class="mb-2 fw-bold">Professor Registration</h2>
+                            <p class="mb-0">Join our faculty and shape the future of education</p>
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="card-body p-4 p-md-5">
+                            <form id="professorSignupForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label fw-semibold">First Name *</label>
+                                        <input type="text" class="form-control form-control-lg" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label fw-semibold">Last Name *</label>
+                                        <input type="text" class="form-control form-control-lg" id="lastName" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label fw-semibold">Institutional Email *</label>
+                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="facultyId" class="form-label fw-semibold">Faculty ID *</label>
+                                        <input type="text" class="form-control form-control-lg" id="facultyId" placeholder="e.g., FAC2025001" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label fw-semibold">Phone Number *</label>
+                                        <input type="tel" class="form-control form-control-lg" id="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="department" class="form-label fw-semibold">Department *</label>
+                                        <select class="form-select form-select-lg" id="department" required>
+                                            <option value="">Select Department</option>
+                                            <option value="cs">Computer Science</option>
+                                            <option value="ee">Electrical Engineering</option>
+                                            <option value="me">Mechanical Engineering</option>
+                                            <option value="ce">Civil Engineering</option>
+                                            <option value="business">Business Administration</option>
+                                            <option value="arts">Arts & Humanities</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="designation" class="form-label fw-semibold">Designation *</label>
+                                        <select class="form-select form-select-lg" id="designation" required>
+                                            <option value="">Select Designation</option>
+                                            <option value="assistant">Assistant Professor</option>
+                                            <option value="associate">Associate Professor</option>
+                                            <option value="professor">Professor</option>
+                                            <option value="visiting">Visiting Professor</option>
+                                            <option value="emeritus">Professor Emeritus</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="specialization" class="form-label fw-semibold">Area of Specialization *</label>
+                                        <input type="text" class="form-control form-control-lg" id="specialization" placeholder="e.g., Machine Learning, Data Structures" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="qualification" class="form-label fw-semibold">Highest Qualification *</label>
+                                        <select class="form-select form-select-lg" id="qualification" required>
+                                            <option value="">Select Qualification</option>
+                                            <option value="phd">Ph.D.</option>
+                                            <option value="masters">Master's Degree</option>
+                                            <option value="postdoc">Post Doctorate</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="experience" class="form-label fw-semibold">Years of Experience *</label>
+                                        <input type="number" class="form-control form-control-lg" id="experience" min="0" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="password" class="form-label fw-semibold">Password *</label>
+                                        <input type="password" class="form-control form-control-lg" id="password" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="confirmPassword" class="form-label fw-semibold">Confirm Password *</label>
+                                        <input type="password" class="form-control form-control-lg" id="confirmPassword" required>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="terms" required>
+                                            <label class="form-check-label" for="terms">
+                                                I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-danger btn-lg w-100">
+                                            Create Account <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Card Footer -->
+                        <div class="card-footer bg-light text-center py-3 border-0">
+                            <a href="index.html" class="text-decoration-none">
+                                <i class="fas fa-arrow-left me-2"></i>Back to Role Selection
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
